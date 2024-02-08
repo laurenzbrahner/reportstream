@@ -6,7 +6,7 @@ import numpy as np
 import geopandas as gpd
 import json
 
-st.set_page_config(page_title="Einlfuss der Tonart",
+st.set_page_config(page_title="Report music-trends",
                    page_icon="📈", layout='wide')
 
 csv_file_path = './spotify_angereichert_cleaned.csv'
@@ -656,7 +656,8 @@ points = alt.Chart(world_df).mark_circle(opacity=0).encode(
 
 final_chart = alt.layer(base, points).configure_title(
     fontSize=25,
-    anchor='start'
+    anchor='start',
+    color="grey"
 )
 
 
